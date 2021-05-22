@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+  <style>
+    .navbar-brand img {
+      width: 90px;
+      height: 70px;
+    }
+
+    .breadcrumb {
+      justify-content: center;
+    }
+
+    .breadcrumb-item a {
+      text-decoration: none;
+    }
+
+
+   section form .btn {
+      margin-left: 45%;
+    }
+
+   section form input, section form select{
+width: 60% !important;
+margin-left: 30px !important;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <!--<a class="navbar-brand" href="#">Navbar scroll</a> -->
+      <a class="navbar-brand" href="index.htm"><img src="asset/images/g-logo.png" alt="logo" /></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.htm">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.htm">Order</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Boxes
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="#">New</a></li>
+              <li><a class="dropdown-item" href="#">Sale</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="index.htm/#all-link">All</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<br> 
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.htm">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Order</li>
+    </ol>
+  </nav>
+
+  <br> <br> <br>
+
+  <section>
+  <form class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4 position-relative">
+    <label for="validationTooltip01" class="form-label">First name</label>
+      <input type="text" class="form-control" id="validationTooltip01" required>
+      <div class="valid-tooltip">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltip02" class="form-label">Last name</label>
+      <input type="text" class="form-control" id="validationTooltip02"  required>
+      <div class="valid-tooltip">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltipUsername" class="form-label">Email</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+        <input type="email" class="form-control" id="validationTooltipUsername"
+          aria-describedby="validationTooltipUsernamePrepend" required>
+        <div class="invalid-tooltip">
+          Please choose a unique and valid email.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 position-relative">
+      <label for="validationTooltip03" class="form-label">Box Name</label>
+      <select class="form-select" id="validationTooltip04" required>
+        <option selected disabled value="">Choose...</option>
+        <option>Box for Woman</option>
+        <option>Box for Man</option>
+        <option>Box for Yourself</option>
+        <option>Mini box</option>
+        <option>...</option>
+      </select>
+      <div class="invalid-tooltip">
+        Please select a valid box.
+      </div>
+    </div>
+    <div class="col-md-3 position-relative">
+      <label for="validationTooltip04" class="form-label">City</label>
+      <select class="form-select" id="validationTooltip04" required>
+        <option selected disabled value="">Choose...</option>
+        <option>Baku</option>
+        <option>Sumgait</option>
+        <option>...</option>
+      </select>
+      <div class="invalid-tooltip">
+        Please select a valid city.
+      </div>
+    </div>
+    <div class="col-md-3 position-relative">
+      <label for="validationTooltip05" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="validationTooltip05" required>
+      <div class="invalid-tooltip">
+        Please provide a valid zip.
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit order</button>
+    </div>
+  </form>
+</section>
+
+<br> <br> <br> <br> <br>
+
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="contact.htm">Contact</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="about.htm">About us</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+
+</ul>
+
+
+
+
+</body>
+
+</html>
